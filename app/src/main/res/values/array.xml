@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ticket_types">
+        <item>Single Ride</item>
+        <item>Day Pass</item>
+        <item>Weekly Pass</item>
+        <item>Monthly Pass</item>
+    </string-array>
+    <string-array name="quantity_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="stations">
+        <item>Hemayetpur</item>
+        <item>Baliarpur</item>
+        <item>Bilmalia</item>
+        <item>AminBazar</item>
+        <item>Gabtoli</item>
+        <item>DarUsSalam</item>
+        <item>Technical</item>
+        <item>EmbankmentRoad</item>
+        <item>Bosila</item>
+        <item>Mohammudpur</item>
+        <item>SahiMasjid</item>
+        <item>Dhanmondi2</item>
+        <item>ScienceLab</item>
+        <item>NewMarket</item>
+        <item>Nilkhet</item>
+        <item>Azimpur</item>
+        <item>Polashi</item>
+        <item>ShahidMinar</item>
+        <item>DhakaMedical</item>
+        <item>PoliceHeadQuarter</item>
+        <item>GolapShahMazar</item>
+        <item>BangaBhaban</item>
+        <item>Motijhil</item>
+        <item>Arambagh</item>
+        <item>BangladeshSecrateriat</item>
+        <item>DhakaUniversity</item>
+        <item>Shahbagh</item>
+        <item>Karwanbazar</item>
+        <item>RusetSquare</item>
+        <item>Asadgate</item>
+        <item>Collegegate</item>
+        <item>Shyamoli</item>
+        <item>Kallyanpur</item>
+        <item>Kamlapur</item>
+        <item>Mugda</item>
+        <item>Manda</item>
+        <item>Demra</item>
+        <item>ChattagramRoad</item>
+        <item>Rajarbagh</item>
+        <item>Malibagh</item>
+        <item>Rampura</item>
+        <item>AftabNagar</item>
+        <item>Tejgaon</item>
+        <item>Hatirjheel</item>
+        <item>Karwanbazar</item>
+        <item>AftabNagarCentral</item>
+        <item>AftabNagarEast</item>
+        <item>Nasirabad</item>
+        <item>Dasherkandi</item>
+        <item>Badda</item>
+        <item>NorthBadda</item>
+        <item>Notunbazar</item>
+        <item>Vatara</item>
+        <item>Nadda</item>
+        <item>Gulshan2</item>
+        <item>Banani</item>
+        <item>Kochukhet</item>
+        <item>Mirpur14</item>
+        <item>Mirpur10</item>
+        <item>Mirpur11</item>
+        <item>Pallabi</item>
+        <item>UttaraSouth</item>
+        <item>Uttaracenter</item>
+        <item>UttaraNorth</item>
+        <item>Mirpur1</item>
+        <item>DarUsSalam</item>
+        <item>Kazipara</item>
+        <item>Shewrapara</item>
+        <item>Agargaon</item>
+        <item>BijoySarani</item>
+        <item>Farmgate</item>
+    </string-array>
+
+</resources>

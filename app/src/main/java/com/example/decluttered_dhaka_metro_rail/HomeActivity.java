@@ -32,6 +32,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        Intent dataExtractor = getIntent();
+        String email = dataExtractor.getStringExtra("email");
         /**
          * Initializing buttons
          */
@@ -56,8 +59,10 @@ public class HomeActivity extends AppCompatActivity {
                  * Navigates from the MainActivity to the BuyTicket activity.
                  * This method starts the BuyTicket activity, allowing the user to buy tickets.
                  */
-//                Intent intent = new Intent(MainActivity.this, BuyTicket.class);
-//                startActivity(intent);
+
+                Intent intent = new Intent(HomeActivity.this, BuyTicketActivity.class);
+                intent.putExtra("email1",email);
+                startActivity(intent);
             }
         });
 
@@ -68,7 +73,8 @@ public class HomeActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-                // To do
+                Intent intent = new Intent(HomeActivity.this, InDangerActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -110,8 +116,8 @@ public class HomeActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, MinCost.class);
-//                startActivity(intent);
+                Intent intent = new Intent(HomeActivity.this, MinCostActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -151,7 +157,9 @@ public class HomeActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-                // to do
+                 Intent intent = new Intent(HomeActivity.this,ViewProfileActivity.class);
+                 intent.putExtra("email",email);
+                 startActivity(intent);
             }
         });
 

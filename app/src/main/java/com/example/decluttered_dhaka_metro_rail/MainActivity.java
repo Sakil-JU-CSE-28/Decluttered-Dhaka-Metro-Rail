@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     // Proceed to the next activity or the main application
                     Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                    intent.putExtra("email",eml);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Invalid Email or Password", Toast.LENGTH_SHORT).show();
