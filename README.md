@@ -68,4 +68,11 @@ We encourage you to submit pull requests (PRs) for any improvements, bug fixes, 
 - **Ticket Purchase**: Users select travel details, make payments, and receive tickets.
 - **Real-Time Updates**: Provides current information about metro services and station details.
 - **Feedback System**: Collects user feedback for ongoing improvements.
-# ScreenShot of the Main Function
+# ScreenShot of Some Function
+![Screenshot 2024-08-11 230431](https://github.com/user-attachments/assets/74c35915-a16a-4c23-9fc5-d0619791cf99)
+![Screenshot 2024-08-11 230559](https://github.com/user-attachments/assets/878d1560-c1f5-4c49-95a2-c2a6afde5a34)
+![Screenshot 2024-08-11 230729](https://github.com/user-attachments/assets/42783f8a-87cf-4e23-a1c9-d351755c9f90)
+![Screenshot 2024-08-11 230755](https://github.com/user-attachments/assets/9ff96688-3f05-4e81-b650-a82a3598b91f)
+![Screenshot 2024-08-11 230906](https://github.com/user-attachments/assets/1e6ae97a-5969-47dd-95dc-5472c38ec3aa)
+![Screenshot 2024-08-11 230927](https://github.com/user-attachments/assets/d140c8bd-94e5-49dc-8c19-eb70f82b5bce)
+![Screenshot 2024-08-11 231022](https://github.com/user-attachments/assets/64381127-ac7c-45ac-8a2d-4b18e1315416)
