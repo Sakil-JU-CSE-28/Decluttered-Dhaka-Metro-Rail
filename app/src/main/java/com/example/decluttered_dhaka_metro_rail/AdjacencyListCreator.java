@@ -23,7 +23,7 @@ public class AdjacencyListCreator {
      * to access the connection list of stations
      * stored in stations.tx file under raw directory
      */
-    private Resources resources;
+     Resources resources;
 
     /**
      * this method return the adjacency list

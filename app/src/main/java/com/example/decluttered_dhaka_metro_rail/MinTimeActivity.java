@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -23,10 +22,12 @@ import java.util.Random;
 import java.util.Set;
 import java.util.Vector;
 
-public class MinCostActivity extends AppCompatActivity {
+public class MinTimeActivity extends AppCompatActivity {
 
+    private String sourceStation,destinationStation;
     Resources resources;
 
+    @SuppressLint("MissingInflatedId")
     /**
      * Called when the activity is starting. This is where most initialization should go.
      *
@@ -34,12 +35,11 @@ public class MinCostActivity extends AppCompatActivity {
      *     being shut down then this Bundle contains the data it most recently supplied in
      *     onSaveInstanceState(Bundle). Note: Otherwise it is null.
      */
-    String sourceStation,destinationStation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_min_cost);
+        setContentView(R.layout.activity_min_time);
 
         /**
          * when the button pressed on the interface
@@ -49,7 +49,7 @@ public class MinCostActivity extends AppCompatActivity {
          * 3. show the cost and staions
          */
 
-        Button btnMinCost = findViewById(R.id.btnViewMinCost);
+        Button btnMinTime = findViewById(R.id.btnViewMinTime);
         Spinner sourceStationSelector = findViewById(R.id.spinner1);
         Spinner destStationSelector = findViewById(R.id.spinner2);
 
@@ -67,6 +67,7 @@ public class MinCostActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
                 sourceStation = "";
             }
         });
@@ -84,6 +85,7 @@ public class MinCostActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
                 destinationStation = "";
             }
         });
@@ -94,11 +96,9 @@ public class MinCostActivity extends AppCompatActivity {
          *
          * @param btnMinCost The "Minimum Cost" button
          */
-        btnMinCost.setOnClickListener(new View.OnClickListener() {
+        btnMinTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 //create map for keep track of stationName with station
                 Map<String,Station>stationDetector = new HashMap<>();
                 // to store stations
@@ -113,7 +113,6 @@ public class MinCostActivity extends AppCompatActivity {
                     stationDetector.put(stationname,station);
                     stations.add(station);
                 }
-
                 // create adjacency list
                 AdjacencyListCreator adjacencyListCreator = new AdjacencyListCreator();
                 adjacencyListCreator.resources = getResources();
@@ -123,7 +122,6 @@ public class MinCostActivity extends AppCompatActivity {
                         startStation.addDestination(endStation,getRandomTime());
                     }
                 }
-                Toast.makeText(MinCostActivity.this, "Btn clicked!!", Toast.LENGTH_SHORT).show();
                 // create a graph
                 Graph graph = new Graph();
                 // add station to graph
@@ -132,7 +130,7 @@ public class MinCostActivity extends AppCompatActivity {
                 }
                 // calculate shortest path
                 graph = calculateShortestPathFromSource(graph,stationDetector.get(sourceStation));
-//
+
                 StringBuilder stationList = new StringBuilder();
                 for(Station station : graph.getNodes()){
                     stationDetector.put(station.getName(),station);
@@ -142,38 +140,37 @@ public class MinCostActivity extends AppCompatActivity {
                     stationList.append(station.getName() + "\n");
                 }
 
-                String minDist = "Cost = ";
+                String minDist = "Time = ";
                 minDist += stationDetector.get(destinationStation).getDistance().toString();
                 stationList.append(minDist);
 
-                TextView textView = findViewById(R.id.belowCardTextView);
+                TextView textView = findViewById(R.id.belowCardTextViewMinTime);
                 textView.setText(stationList.toString());
-
             }
 
         });
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationViewMinCost);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationViewMinTime);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.action_home) {
                 // Handle home action
-                Intent intent = new Intent(MinCostActivity.this, HomeActivity.class);
+                Intent intent = new Intent(MinTimeActivity.this, HomeActivity.class);
                 startActivity(intent);
                 return true;
             } else if (itemId == R.id.action_pre) {
                 // Handle pre action
-                Intent intent = new Intent(MinCostActivity.this, HomeActivity.class);
+                Intent intent = new Intent(MinTimeActivity.this, HomeActivity.class);
                 startActivity(intent);
                 return true;
             } else if (itemId == R.id.action_next) {
                 // Handle next action
-                Intent intent = new Intent(MinCostActivity.this, MinCostActivity.class);
+                Intent intent = new Intent(MinTimeActivity.this, HomeActivity.class);
                 startActivity(intent);
                 return true;
             } else if (itemId == R.id.action_logout) {
                 // Handle logout action
-                Intent intent = new Intent(MinCostActivity.this, MainActivity.class);
+                Intent intent = new Intent(MinTimeActivity.this, MainActivity.class);
                 startActivity(intent);
                 return true;
             } else {
@@ -181,7 +178,6 @@ public class MinCostActivity extends AppCompatActivity {
             }
         });
     }
-
     /**
      * Calculates the shortest path from a given source station in the graph.
      *
@@ -220,7 +216,7 @@ public class MinCostActivity extends AppCompatActivity {
      * @param unsettledNodes The set of nodes whose distances are to be evaluated.
      * @return The node with the lowest distance among the unsettled nodes.
      */
-    public static Station getLowestDistanceNode(Set < Station > unsettledNodes) {
+    private static Station getLowestDistanceNode(Set < Station > unsettledNodes) {
         Station lowestDistanceNode = null;
         int lowestDistance = Integer.MAX_VALUE;
         for (Station node: unsettledNodes) {
@@ -240,8 +236,8 @@ public class MinCostActivity extends AppCompatActivity {
      * @param edgeWeigh     The weight of the edge connecting the evaluation node with the source node.
      * @param sourceNode     The source node from which the evaluation node is being evaluated.
      */
-    public static void CalculateMinimumDistance(Station evaluationNode,
-                                                Integer edgeWeigh, Station sourceNode) {
+    private static void CalculateMinimumDistance(Station evaluationNode,
+                                                 Integer edgeWeigh, Station sourceNode) {
         Integer sourceDistance = sourceNode.getDistance();
         if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
             evaluationNode.setDistance(sourceDistance + edgeWeigh);
@@ -255,10 +251,9 @@ public class MinCostActivity extends AppCompatActivity {
      * for getting random time
      * @return
      */
-
     public  int getRandomTime(){
-        int min = 10;
-        int max = 50;
+        int min = 1;
+        int max = 5;
         Random random = new Random();
         int randomNumber = random.nextInt(max - min + 1) + min;
         return randomNumber;

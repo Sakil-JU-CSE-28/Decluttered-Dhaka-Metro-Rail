@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,6 +19,7 @@ public class ViewProfileActivity extends AppCompatActivity {
     private ListView listViewTickets;
     private BuyTicketDbController dbController;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         Intent dataExtractor = getIntent();
         String user = dataExtractor.getStringExtra("email");
 
-        listViewTickets = findViewById(R.id.listViewTickets);
+        listViewTickets = findViewById(R.id.listViewTicket);
         dbController = new BuyTicketDbController(this);
 
         List<Ticket> tickets = dbController.getTicketsByUser(user);
@@ -34,6 +36,8 @@ public class ViewProfileActivity extends AppCompatActivity {
         for (Ticket ticket : tickets) {
             ticketDescriptions.add(ticket.toString()); // Or format the string as you like
         }
+
+        Toast.makeText(this, ticketDescriptions.toString(), Toast.LENGTH_SHORT).show();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,

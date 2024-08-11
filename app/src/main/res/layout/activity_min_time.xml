@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MinCostActivity">
+    tools:context=".MinTimeActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         android:background="#3F51B5"
         android:elevation="4dp"
-        app:title="View Stations List For MinCost"
+        app:title="View Stations List For MinTime"
         app:titleTextColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -26,6 +26,7 @@
         android:src="@drawable/dhakametro"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 
     <!-- CardView for Rest of the Items -->
@@ -97,7 +98,7 @@
 
             <!-- Button -->
             <Button
-                android:id="@+id/btnViewMinCost"
+                android:id="@+id/btnViewMinTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="View"
@@ -112,7 +113,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/belowCardTextView"
+        android:id="@+id/belowCardTextViewMinTime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text=""
@@ -123,9 +124,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
         android:gravity="center"/>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigationViewMinCost"
+        android:id="@+id/navigationViewMinTime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#3F51B5"

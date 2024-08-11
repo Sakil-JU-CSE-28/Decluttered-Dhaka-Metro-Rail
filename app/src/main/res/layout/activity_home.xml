@@ -114,32 +114,31 @@
     <!-- Row 4 -->
     <Button
         android:id="@+id/btnSearchFriend"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
+        android:layout_width="203dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_background"
-        android:text="Search Friend"
-        android:textSize="20sp"
         android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnMinTime"
+        android:text="Track Metro"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/btnMinCost"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btnMinTime" />
+
     <Button
         android:id="@+id/btnViewProfile"
-        android:layout_width="0dp"
-        android:layout_height="140dp"
+        android:layout_width="208dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_background"
+        android:padding="12dp"
         android:text="Profile"
         android:textSize="20sp"
-        android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnMinCost"
-        app:layout_constraintStart_toEndOf="@id/btnSearchFriend"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="4dp"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/btnSearchFriend"
+        app:layout_constraintTop_toBottomOf="@id/btnMinCost" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"

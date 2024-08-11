@@ -26,9 +26,7 @@ public class Station {
     public Station(String name) {
         this.name = name;
     }
-    public Station(){
-        this.name = "default";
-    }
+
     public List<Station> getShortestPath() {
         return shortestPath;
     }

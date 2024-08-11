@@ -49,7 +49,7 @@ public class StationExtractor {
     }
 
     public void addFeedBack(String txt,String name){
-        Station station = new Station();
+        Station station = new Station(name);
         station.setName(name);
         station.addComment(txt);
     }

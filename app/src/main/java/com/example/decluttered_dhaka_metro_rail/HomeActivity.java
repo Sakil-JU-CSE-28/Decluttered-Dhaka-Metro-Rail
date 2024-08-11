@@ -20,7 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HomeActivity extends AppCompatActivity {
-    private Button btnBuyTicket, btnInDanger, btnViewMetro, btnViewStations, btnMinTime, btnMinCost, btnSearchFriend, btnViewProfile;
+    private Button btnBuyTicket, btnInDanger, btnViewMetro, btnViewStations, btnMinTime, btnMinCost, btnTrackMetro, btnViewProfile;
 
     /**
      * Called when the activity is starting.
@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         btnViewStations = findViewById(R.id.btnViewStations);
         btnMinTime = findViewById(R.id.btnMinTime);
         btnMinCost = findViewById(R.id.btnMinCost);
-        btnSearchFriend = findViewById(R.id.btnSearchFriend);
+        btnTrackMetro = findViewById(R.id.btnSearchFriend);
         btnViewProfile = findViewById(R.id.btnViewProfile);
 
         btnBuyTicket.setOnClickListener(new View.OnClickListener() {
@@ -85,8 +85,8 @@ public class HomeActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, ViewMetro.class);
-//                startActivity(intent);
+                Intent intent = new Intent(HomeActivity.this, ViewMetroFeaturesActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -102,8 +102,8 @@ public class HomeActivity extends AppCompatActivity {
                  * This method starts the ViewStations activity, allowing the user to view
                  * and do some operation with stations.
                  */
-//                Intent intent = new Intent(MainActivity.this,ViewStations.class);
-//                startActivity(intent);
+                Intent intent = new Intent(HomeActivity.this,ViewStationsActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -130,12 +130,12 @@ public class HomeActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, MinTime.class);
-//                startActivity(intent);
+                Intent intent = new Intent(HomeActivity.this, MinTimeActivity.class);
+                startActivity(intent);
             }
         });
 
-        btnSearchFriend.setOnClickListener(new View.OnClickListener() {
+        btnTrackMetro.setOnClickListener(new View.OnClickListener() {
             /**
              * Sets an OnClickListener for the btnSearchFriend button.
              * This listener handles the click event for searching friends.
@@ -144,7 +144,8 @@ public class HomeActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-                // to do
+                Intent intent = new Intent(HomeActivity.this,MetroMapActivity.class);
+                startActivity(intent);
             }
         });
 
