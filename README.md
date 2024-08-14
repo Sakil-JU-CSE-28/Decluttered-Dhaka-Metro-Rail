@@ -44,7 +44,14 @@ We encourage you to submit pull requests (PRs) for any improvements, bug fixes, 
   - Users can select their source and destination stations.
   - Specify the number of tickets they wish to purchase.
   - Proceed to a payment gateway to complete the ticket purchase.
-
+ - **Min Cost**: 
+  - Users can select their source and destination stations.
+  - Get the station list
+ - **Min Time**: 
+  - Users can select their source and destination stations.
+  - Get the station list
+- **In Danger**: 
+  - Users can contact with the authority in case of emergency.
 - **View Metro**:
   - Provides real-time information about metro schedules and operational status.
   - Allows users to view detailed information about metro services.
@@ -61,7 +68,10 @@ We encourage you to submit pull requests (PRs) for any improvements, bug fixes, 
 - **User Authentication**:
   - Users must register and log in to access the app’s features.
   - Ensures secure and personalized experiences for users.
-
+- **Track Metro**: 
+  - Users can access the latest geolocation of metros.
+- **View Profile**: 
+  - Users can access and edit their profile info.
 ## How It Works
 
 - **Registration and Login**: Users register with their email, name, and password, and log in to access app features.
