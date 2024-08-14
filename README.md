@@ -86,3 +86,5 @@ We encourage you to submit pull requests (PRs) for any improvements, bug fixes, 
 ![Screenshot 2024-08-11 230906](https://github.com/user-attachments/assets/1e6ae97a-5969-47dd-95dc-5472c38ec3aa)
 ![Screenshot 2024-08-11 230927](https://github.com/user-attachments/assets/d140c8bd-94e5-49dc-8c19-eb70f82b5bce)
 ![Screenshot 2024-08-11 231022](https://github.com/user-attachments/assets/64381127-ac7c-45ac-8a2d-4b18e1315416)
+![Screenshot 2024-08-14 212846](https://github.com/user-attachments/assets/ef52b6bc-a7d3-441a-b4c1-8401a2e6a04c)
+
