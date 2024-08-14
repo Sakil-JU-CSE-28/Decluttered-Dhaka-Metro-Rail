@@ -44,10 +44,10 @@ We encourage you to submit pull requests (PRs) for any improvements, bug fixes, 
   - Users can select their source and destination stations.
   - Specify the number of tickets they wish to purchase.
   - Proceed to a payment gateway to complete the ticket purchase.
- - **Min Cost**: 
+- **Min Cost**: 
   - Users can select their source and destination stations.
   - Get the station list
- - **Min Time**: 
+- **Min Time**: 
   - Users can select their source and destination stations.
   - Get the station list
 - **In Danger**: 
